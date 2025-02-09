@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কুরআনের আলো</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        h2 {
+            font-family: 'Sakkal Majalla', serif;
+            font-size: 35px;
+            color: #00bfff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0, 191, 255, 0.6);
+        }
+
+        #searchBox {
+            width: 100%;
+            max-width: 600px;
+            padding: 12px 20px;
+            border: 2px solid #00bfff;
+            border-radius: 8px;
+            background-color: #333;
+            color: #fff;
+            font-size: 18px;
+            outline: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        #searchBox:focus {
+            background-color: #444;
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.6);
+        }
+
+        #searchBtn {
+            padding: 12px 20px;
+            background-color: #00bfff;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+            max-width: 600px;
+            transition: background-color 0.3s ease;
+        }
+
+        #searchBtn:hover {
+            background-color: #1e90ff;
+        }
+
+        #results {
+            margin-top: 30px;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 191, 255, 0.3);
+            width: 100%;
+            max-width: 800px;
+            color: #b0c4de;
+            text-align: left;
+            line-height: 1.6;
+            font-size: 18px;
+            max-height: 400px;
+            overflow-y: auto;
+            word-wrap: break-word;
+        }
+
+        .verse {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: #1e90ff;
+            font-size: 18px;
+        }
+
+        .verse strong {
+            font-size: 20px;
+            color: #00bfff;
+        }
+
+        .explanation {
+            font-style: italic;
+            color: #87cefa;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #aaa;
+            margin-top: 30px;
+        }
+
+        .footer a {
+            color: #00bfff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            #searchBox, #searchBtn {
+                width: 90%;
+            }
+
+            #results {
+                width: 90%;
+                margin: 0 5%;
+            }
+
+            .verse {
+                font-size: 16px;
+                padding: 12px;
+            }
+
+            .explanation {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+	<center><a href="./index.html"><img src="quran_logo.png" alt="Quran Er Alo" style="width:85px;height:85px;"></a></center>
+    <h2>কুরআনের আলো</h2>
+    <input type="text" id="searchBox" placeholder="আপনার প্রশ্ন লিখুন...">
+    <button id="searchBtn">খুঁজুন</button>
+    <div id="results"></div>
+
+    <div class="footer">
+        <p>কুরআনের আলো<br><a href="https://www.facebook.com/humayunshariarhimu">Humayun Shariar Himu</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
